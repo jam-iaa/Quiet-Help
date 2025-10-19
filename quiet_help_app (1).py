@@ -12,7 +12,6 @@ from email.mime.text import MIMEText
 import os
 from huggingface_hub import InferenceClient
 import pyrebase
-from google.colab import userdata
 
 #        Emergency Page
 def get_emergency_bio(service):
@@ -140,7 +139,7 @@ def chatbot_response(message, history):
   # Load the API key
 if 'HF_Token' not in os.environ:
   print("⚠️ Warning: HF_TOKEN not found in Colab secrets. Hardcoding for testing.")
-hf_token = userdata.get("Hf_Token")
+hf_token = os.environ.get("HF_TOKEN")
 
 # Initialise the Hugging Face Client
 try:
