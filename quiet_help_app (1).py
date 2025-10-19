@@ -7,10 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1WpziAn69Fu-fA2z5jtpapnSHrmvK-mzv
 """
 
-!pip install gradio
-!pip install -U huggingface_hub
-!pip install pyrebase4
-
 import smtplib
 from email.mime.text import MIMEText
 import os
